@@ -141,13 +141,17 @@ p { font-family: 'Lato';
 @media (max-width: 768px){
 	#Togglemap {width: 45%;margin: 0 auto;}
 }
+.form-main {
+	background-color: #607D8B;
+}
 /* Forms */
 
-.form-find {		
+.form-find {	
 	width: 50%;
 	margin: 0 auto;
 	margin-top: 70px;
 }
+
 label {
 	font-family:'Lato';
 	font-size: 18PX;
@@ -162,6 +166,7 @@ input[type=text],input[type=tel],input[type=email], select, textarea {
     border: 1px solid #ccc;
     border-radius: 4px;
 	resize: vertical;
+	background-color: #BDBDBD;
 	
 }
 input[type="submit"] {
