@@ -1,6 +1,10 @@
 $(document).ready(function(){
   $("#createMarker").on("click", function(){
 
+    $('#wrapper').html('<div class="" include-html="form_find.html"></div>');
+    includeHTML();
+
+
   $("#mapContainer").slideDown("speed: slow");
   var marker;
 
