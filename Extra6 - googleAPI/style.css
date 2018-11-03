@@ -141,19 +141,23 @@ p { font-family: 'Lato';
 @media (max-width: 768px){
 	#Togglemap {width: 45%;margin: 0 auto;}
 }
-.form-main {
-	background-color: #607D8B;
-}
+
 /* Forms */
+.form-main {
+	width: 50%;
+	background-color: #607D8B;
+	box-shadow: 5px 10px 8px #888888;
+	margin: 0 auto;
+}
 
 .form-find {	
-	width: 50%;
+	width: 80%;
 	margin: 0 auto;
 	margin-top: 70px;
 }
 
 label {
-	font-family:'Lato';
+	font-family:'Roboto';
 	font-size: 18PX;
     text-align: center;
 	display: block;
@@ -172,6 +176,7 @@ input[type=text],input[type=tel],input[type=email], select, textarea {
 input[type="submit"] {
 	position: relative;
 	margin-top: 30px;
+	margin-bottom: 100px;
 	border-radius: 10px;
     background-color: #9E9E9E;
     border: none;
