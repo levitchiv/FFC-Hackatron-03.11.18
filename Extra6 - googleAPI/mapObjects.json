@@ -1,0 +1,19 @@
+[
+  {
+    "locName": "Biserica neagra",
+    "id": "bisericaNeagra",
+    "coords": {
+      "lat": 45.6408,
+      "lng": 25.5878
+    }
+
+  },
+  {
+    "locName": "Prima Scoala Romaneasca",
+    "id": "primaScoala",
+    "coords": {
+      "lat": 45.6358,
+      "lng": 25.5811
+    }
+  }
+]

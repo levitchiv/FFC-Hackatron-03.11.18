@@ -1,0 +1,90 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+#navBar {
+  width: 100%;
+  height: 80px;
+  background-color: blue;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#Togglemap {
+  width: 15%;
+  height: 70px;
+  background-color: aqua;
+  outline: 0;
+  border: none;
+}
+
+#mapContainer {
+  width: 100%;
+  height: 600px;
+}
+
+.header {
+		width: 100%;
+		height: 300px;
+		background-image: url("resources/Biserica_Neagra_Brasov_Romania.jpg");
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: 50% 80%;
+}
+
+#imagetext 	{
+	font-size: 60px;
+	font-family: arial;
+	color: #fff;
+	opacity: 0.9;
+	height: 300px;
+	display: flex;
+	align-items:flex-end;
+}
+
+.content p {
+	font-family: arial;
+	margin: 5px 20px;
+	text-indent: 20px;
+}
