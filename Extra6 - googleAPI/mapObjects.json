@@ -1,6 +1,9 @@
 [
   {
-    "locName": "Biserica neagra",
+    "name": "Biserica neagra",
+    "email": "andrei.popescu@gmail.com",
+    "phone":"0744.444.444",
+    "category": "Phone",
     "id": "bisericaNeagra",
     "coords": {
       "lat": 45.6408,
@@ -9,8 +12,11 @@
 
   },
   {
-    "locName": "Prima Scoala Romaneasca",
-    "id": "primaScoala",
+    "name": "Biserica neagra",
+    "email": "andrei.popescu@gmail.com",
+    "phone":"0744.444.444",
+    "category": "Phone",
+    "id": "bisericaNeagra",
     "coords": {
       "lat": 45.6358,
       "lng": 25.5811
