@@ -1,5 +1,6 @@
 
 $("#createMarker").on("click", function(){
+  debugger;
   $("#mapContainer").slideDown("speed: slow");
   var marker;
 
