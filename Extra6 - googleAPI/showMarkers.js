@@ -12,6 +12,7 @@ $(document).ready(function(){
 
   //functie care arata obuectele pierdute pe harta
   $("#showMarker").on("click", function(){
+    $("#mapContainer").slideDown("speed: slow");
     for(var i = 0; i < location.length; i++){
       //creez marker pe coordonatele din obiectul salvat in "location[i]" de pe server
       var marker = new google.maps.Marker({position: location[i].coords});

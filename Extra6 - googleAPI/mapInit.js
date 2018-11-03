@@ -2,6 +2,7 @@ var map;
 
 $(document).ready(function(){
   //slideToggle pentru harta
+  $("#mapContainer").hide();
   $("#Togglemap").on("click", function(){
     $("#mapContainer").slideToggle("speed: slow");
   });
