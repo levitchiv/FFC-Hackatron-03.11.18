@@ -1,7 +1,7 @@
 $(document).ready(function(){
   $("#createMarker").on("click", function(){
 
-    $('#wrapper').html('<div class="form-main" include-html="form_find.html"></div>');
+    $('#wrapper').html('<div class="" include-html="form_find.html"></div>');
     includeHTML();
 
 
@@ -17,6 +17,8 @@ $(document).ready(function(){
       marker = new google.maps.Marker({
         position: location,
         map: map
-    }); } else {   marker.setPosition(location); } }
+    }); } else {   marker.setPosition(location); }
+      $("#custId").val(location);
+    }
   })
 })
