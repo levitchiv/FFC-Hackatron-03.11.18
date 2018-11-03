@@ -1,63 +1,65 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 <div class="container form-find">
-        <form action="">
-          <div class="row">
+    <form action="">
+        <div class="row">
+        <div class="col-25">
+            <label for="name">Your Name</label>
+        </div>
+        <div class="col-75">
+            <input type="text" id="name" name="name" placeholder="Your name..">
+        </div>
+        </div>
+        <div class="row">
+        <div class="col-25">
+            <label for="email">Email</label>
+        </div>
+        <div class="col-75">
+            <input type="email" id="email" name="email" placeholder="Enter your email..">
+        </div>
+        </div>
+        <div class="row">
             <div class="col-25">
-              <label for="name">Your Name</label>
+                <label for="phone">Phone</label>
             </div>
             <div class="col-75">
-              <input type="text" id="name" name="name" placeholder="Your name..">
+                <input type="tel" id="phone" name="phone" placeholder="Enter your telephone number..">
             </div>
-          </div>
-          <div class="row">
+            </div>
+        <div class="row">
+        <div class="col-25">
+            <label for="category">Item Category</label>              
+        </div>            
+        <div class="col-75">
+            <select id="category" name="category">
+            <option value="phone">Phone</option>
+            <option value="money">Money</option>
+            <option value="documents">Documents</option>
+            <option value="keys">Kyes</option>
+            <option value="others">Others</option>
+            </select>
+        </div>
+        </div>
+        <div class="row">
             <div class="col-25">
-              <label for="email">Email</label>
-            </div>
-            <div class="col-75">
-              <input type="email" id="email" name="email" placeholder="Enter your email..">
-            </div>
-          </div>
-          <div class="row">
-                <div class="col-25">
-                  <label for="phone">Phone</label>
-                </div>
-                <div class="col-75">
-                  <input type="tel" id="phone" name="phone" placeholder="Enter your telephone number..">
-                </div>
-              </div>
-          <div class="row">
-            <div class="col-25">
-              <label for="category">Item Category</label>              
+                <label for="item-id">Item ID</label>              
             </div>            
             <div class="col-75">
-              <select id="category" name="category">
-                <option value="phone">Phone</option>
-                <option value="money">Money</option>
-                <option value="documents">Documents</option>
-                <option value="keys">Kyes</option>
-                <option value="others">Others</option>
-              </select>
+                <input type="text" id="item-id" name="item-id">
             </div>
-          </div>
-          <div class="row">
-                <div class="col-25">
-                  <label for="item-id">Item ID</label>              
-                </div>            
-                <div class="col-75">
-                    <input type="text" id="item-id" name="item-id">
-                </div>
-              </div>
+        </div>
+        
 
-          <div class="row">
+        <div class="row">
             <div class="col-25">
-              <label for="subject"></label>
+                <label for="subject"></label>
             </div>
             <div class="col-75">
-              <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
             </div>
-          </div>
-          <div class="row">
-            <input type="submit" value="Submit">
-          </div>
-        </form>
-      </div>
+        </div>
+        <input type="hidden" id="custId" name="custId" value="3487">
+        <div class="row">
+        <input type="submit" value="Submit">
+        </div>
+    </form>
+</div>

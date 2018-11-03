@@ -144,11 +144,9 @@ p { font-family: 'Lato';
 /* Forms */
 
 .form-find {
-	width: 50%;
-	margin: 0 auto;
-    height: 50%;
+	width: 50%;	
 	position:absolute;
-	top: 30%;
+	top: 50%;
 	left: 50%;
 	transform: translate(-50%,-50%);
 	-webkit-transform: translate(-50%,-50%);
