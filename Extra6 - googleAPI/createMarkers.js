@@ -1,6 +1,6 @@
+$(document).ready(function(){
+  $("#createMarker").on("click", function(){
 
-$("#createMarker").on("click", function(){
-  debugger;
   $("#mapContainer").slideDown("speed: slow");
   var marker;
 
@@ -14,4 +14,5 @@ $("#createMarker").on("click", function(){
         position: location,
         map: map
     }); } else {   marker.setPosition(location); } }
+  })
 })
