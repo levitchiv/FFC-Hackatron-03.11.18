@@ -4,7 +4,7 @@ $(document).ready(function(){
   //slideToggle pentru harta
   $("#Togglemap").on("click", function(){
     $("#mapContainer").slideToggle("speed: slow");
-  });  
+  });
   //initializare harta
   getLocation();
   function initMap(position) {
