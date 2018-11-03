@@ -19,7 +19,7 @@ $(document).ready(function(){
       marker.setMap(map);
       //creez info pentru marker cu buton pentru afisare content
       var infowindow = new google.maps.InfoWindow({
-        content:("<button type = 'button' class = 'infoButton' id = " + location[i].id + ">" + location[i].locName + "</button>")
+        content:("<h2>Object: " + location[i].id + "</h2> <h5> Category: " + location[i].category + "</h5><button type = 'button' class = 'infoButton' id = " + location[i].id + "> Contact </button>")
         });
 
       google.maps.event.addListener(marker, 'click', function() {

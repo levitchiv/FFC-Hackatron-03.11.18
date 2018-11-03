@@ -1,10 +1,10 @@
 [
   {
-    "name": "Biserica neagra",
+    "name": "Andrei Popescu",
     "email": "andrei.popescu@gmail.com",
     "phone":"0744.444.444",
     "category": "Phone",
-    "id": "bisericaNeagra",
+    "id": "Iphone7",
     "coords": {
       "lat": 45.6408,
       "lng": 25.5878
@@ -12,11 +12,11 @@
 
   },
   {
-    "name": "Biserica neagra",
-    "email": "andrei.popescu@gmail.com",
+    "name": "Catalin Istrate",
+    "email": "catalin.istrate@gmail.com",
     "phone":"0744.444.444",
-    "category": "Phone",
-    "id": "bisericaNeagra",
+    "category": "Documents",
+    "id": "Buletin",
     "coords": {
       "lat": 45.6358,
       "lng": 25.5811
