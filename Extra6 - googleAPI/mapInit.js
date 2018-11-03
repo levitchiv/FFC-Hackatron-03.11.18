@@ -5,7 +5,7 @@ $(document).ready(function(){
   $("#Togglemap").on("click", function(){
     $("#mapContainer").slideToggle("speed: slow");
   });
-  // Show hide button 
+  // Show hide button
   $("#Togglemap").on("click", function(){
     $("#showMarker").css("display","block");
   });

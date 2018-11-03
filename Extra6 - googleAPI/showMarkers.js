@@ -6,7 +6,6 @@ $(document).ready(function(){
     url: 'mapObjects.json',
     success: function(result){
       location = result;
-      console.log(location);
     }
   })
 
