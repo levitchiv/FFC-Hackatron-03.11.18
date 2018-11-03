@@ -132,6 +132,7 @@ p { font-family: 'Lato';
 	text-decoration: none;
 	cursor: pointer;
 }
+
 #showMarker:hover, #createMarker:hover {box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);}
 .info {background-color: #607D8B;padding-bottom: 100px;}
 @media (max-width: 480px) {
@@ -139,4 +140,69 @@ p { font-family: 'Lato';
 }
 @media (max-width: 768px){
 	#Togglemap {width: 45%;margin: 0 auto;}
+}
+/* Forms */
+
+.form-find {
+	width: 50%;
+	margin: 0 auto;
+    height: 50%;
+	position:absolute;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+}
+label {
+	font-family:'Lato';
+	font-size: 18PX;
+    text-align: center;
+	display: block;
+	padding: 15px 0px ;
+	text-transform: uppercase; 
+}
+input[type=text],input[type=tel],input[type=email], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+	resize: vertical;
+	
+}
+input[type="submit"] {
+	position: relative;
+	margin-top: 30px;
+	border-radius: 10px;
+    background-color: #9E9E9E;
+    border: none;
+    font-size: 24px;
+    color: #FFFFFF;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.input [type=submit] {
+    content: "";
+    background: #f1f1f1;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.input [type=submit]:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
 }
