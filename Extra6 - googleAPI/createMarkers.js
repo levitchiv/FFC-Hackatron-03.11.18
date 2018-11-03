@@ -1,7 +1,7 @@
 $(document).ready(function(){
   $("#createMarker").on("click", function(){
 
-    $('#wrapper').html('<div class="" include-html="form_find.html"></div>');
+    $('#wrapper').html('<div class="form-main" include-html="form_find.html"></div>');
     includeHTML();
 
 
