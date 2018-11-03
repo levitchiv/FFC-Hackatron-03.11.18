@@ -9,6 +9,7 @@ $(document).ready(function(){
     data: JSON.stringify({query:"query {\n  found_objects {\n    id\n    email\n    name\n    phone\n    category\n    description\n   \titem_name\n    lat\n    lng\n  }\n}",variables:null}),
     success: function(result){
       location = result;
+      console.log(location);
     }
   })
   var infowindow = [];
@@ -19,7 +20,7 @@ $(document).ready(function(){
     for(var i = 0; i < location.length; i++){
 
       //creez marker pe coordonatele din obiectul salvat in "location[i]" de pe server
-      marker[i] = new google.maps.Marker({position: location[i].coords});
+      marker[i] = new google.maps.Marker({position: {location[i].lat, location[i].lng}} );
       marker[i].setMap(map);
       //creez info pentru marker cu buton pentru afisare content
       infowindow[i] = new google.maps.InfoWindow({
