@@ -24,7 +24,6 @@ function showMarkers() {
     success: function (result) {
       location = result;
       location = location.data.found_objects;
-      itemList(location);
       location.forEach(function (item) {
         var coords = new google.maps.LatLng(item.lat, item.lng);
         //creez marker pe coordonatele din obiectul
@@ -52,17 +51,13 @@ function loadFormspree(item){
     $("#mapContainer").slideUp("speed: slow");
     $("#wrapper").html(`'<section class="formspree">
           <h2>Lost & Found</h2>
-          <p>Did you lose something? Please give us some details about your lost item and get in touch with the person who found it.</p>
-          <form action="https://formspree.io/'`+ item.email +`'" method="POST">
-            <input type="text" id="myName" placeholder="Enter your name...">
-            <input type="email" id="myEmail" placeholder="Enter your email...">
-            <input type="number" id="myNumber" placeholder="Enter your phone number...">
-            <textarea id="myComment" placeholder="Enter your description..." width="600px" height="450px"></textarea>
-            <a href="tel:+496170961709" class="Blondie">
-    Call me, call me any, anytime
-      <b>Call me (call me) I'll arrive</b>
-        When you're ready we can share the wine!
-</a>          
+          <p>Did you lose something? Please give us some details about your lost item and get in touch with the person who found it.<br></p>
+          <form action="https://formspree.io/`+ item.email +`" method="POST">
+            <input type="text" id="myName" name="Name" placeholder="Enter your name...">
+            <input type="email" id="myEmail" name="Email" placeholder="Enter your email...">
+            <input type="number" id="myNumber" name="Phone" placeholder="Enter your phone number...">
+            <textarea id="myComment" name="Message" placeholder="Enter your description..." width="600px" height="450px"></textarea>
+            <button type="submit" value="send">Submit</button>
             </form>
         </section>'`)
   })
