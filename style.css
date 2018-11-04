@@ -236,7 +236,7 @@ input.valid, textarea.valid{
 	right:0;
 	margin-left:auto;
 	margin-right:auto;
-	top: 300px;
+	top: 150px;
 	background-color:#3a404e;
 	padding: 40px;
 }
@@ -247,6 +247,7 @@ input.valid, textarea.valid{
 	text-align: center;
 }
 .formspree p {padding-bottom: 50px;}
+
 @media (max-width: 768px){
 	#Togglemap {width: 45%;margin: 0 auto;}
 	.form-main {width: 75%;}
