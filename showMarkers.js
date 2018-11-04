@@ -32,7 +32,7 @@ function showMarkers() {
         marker.setMap(map);
         //creez info pentru marker
         var infowindow = new google.maps.InfoWindow({
-          content: ("Item: " + item.name + "<br>Category: " + item.category + "<br><button type='button' id='contactBtn'>Contact me</button>")
+          content: ("Item: " + item.item_name + "<br>Category: " + item.category + "<br><button type='button' id='contactBtn'>Contact me</button>")
         });
 
         google.maps.event.addListener(marker, 'click', function () {
@@ -53,7 +53,7 @@ function loadFormspree(item){
     $("#wrapper").html(`'<section class="formspree">
           <h2>Lost & Found</h2>
           <p>Did you lose something? Please give us some details about your lost item and get in touch with the person who found it.<br><br> The person that found this item: `+ item.name +`<br>Their phone: `+ item.phone +`<br>Their email address: `+item.email +`</p>
-          <form action="https://formspree.io/`+ item.email +`" method="POST">
+          <form action="https://formspree.io/`+ item.email +`" method="POST" target="_blank" >
             <input type="text" id="myName" name="Name" placeholder="Enter your name...">
             <input type="email" id="myEmail" name="Email" placeholder="Enter your email...">
             <input type="number" id="myNumber" name="Phone" placeholder="Enter your phone number...">
