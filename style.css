@@ -163,8 +163,9 @@ label {
 }
 input[type=text],input[type=tel],input[type=email], select, textarea {
     width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	border: 1px solid #ccc;
     border-radius: 4px;
 	resize: vertical;
 	background-color: #BDBDBD;
@@ -208,10 +209,13 @@ input[type="submit"] {
     opacity: 1;
     transition: 0s
 }
+@media (max-width: 768px){
+	#Togglemap {width: 45%;margin: 0 auto;}
+	.form-main {width: 75%;}
+}
+
 @media (max-width: 480px) {
 	#Togglemap {width: 65%;margin: 0 auto;}
 	.form-main {width: 100%;}
-}
-@media (max-width: 768px){
-	#Togglemap {width: 45%;margin: 0 auto;}
+	input[type="submit"] {width: 250px;}
 }
