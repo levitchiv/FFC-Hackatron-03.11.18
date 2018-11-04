@@ -1,5 +1,6 @@
 $(document).ready(function(){
   $("#createMarker").on("click", function(){
+    debugger;
 
     $('#wrapper').html('<div class="form-main" include-html="form_find.html"></div>');
     includeHTML();
