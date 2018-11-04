@@ -32,20 +32,29 @@ function showMarkers() {
         //creez info pentru marker
         var infowindow = new google.maps.InfoWindow({
           content: ("Item: " + item.name + "<br>Category: " + item.category + "<br><button type='button' id='contactBtn'>Contact me</button>")
-
         });
 
         google.maps.event.addListener(marker, 'click', function () {
           infowindow.open(map, marker);
+          loadFormspree(item);
         })
+
       });
+
     }
   });
-loadFormspree();
+
 }
 
-function loadFormspree(){
-  $("#contactBtn").on("click", function(){
-    $("#wrapper").load("form-formspree.html");
+function loadFormspree(item){
+  $("#contactBtn").click(function(){
+    $("#mapContainer").slideUp("speed: slow");
+    $("#wrapper").html(`'<p>Did you lose something? Please give us some details about your lost item and get in touch with the person who found it.</p>
+    <form action="https://formspree.io/'`+ item.email + `'" method="POST" id="formspree">
+      <input type="text" id="myName" placeholder="Enter your name...">
+      <input type="email" id="myEmail" placeholder="Enter your email...">
+      <input type="number" id="myNumber" placeholder="Enter your phone number...">
+      <textarea id="myComment" placeholder="Enter your description..." width="600px" height="300px"></textarea>
+    </form>'`)
   })
 }
