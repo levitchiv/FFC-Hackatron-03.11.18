@@ -49,12 +49,15 @@ function showMarkers() {
 function loadFormspree(item){
   $("#contactBtn").click(function(){
     $("#mapContainer").slideUp("speed: slow");
-    $("#wrapper").html(`'<p>Did you lose something? Please give us some details about your lost item and get in touch with the person who found it.</p>
-    <form action="https://formspree.io/'`+ item.email + `'" method="POST" id="formspree">
-      <input type="text" id="myName" placeholder="Enter your name...">
-      <input type="email" id="myEmail" placeholder="Enter your email...">
-      <input type="number" id="myNumber" placeholder="Enter your phone number...">
-      <textarea id="myComment" placeholder="Enter your description..." width="600px" height="300px"></textarea>
-    </form>'`)
+    $("#wrapper").html(`'<section class="formspree">
+          <h2>Lost & Found</h2>
+          <p>Did you lose something? Please give us some details about your lost item and get in touch with the person who found it.</p>
+          <form action="https://formspree.io/'`+ item.email +`'" method="POST">
+            <input type="text" id="myName" placeholder="Enter your name...">
+            <input type="email" id="myEmail" placeholder="Enter your email...">
+            <input type="number" id="myNumber" placeholder="Enter your phone number...">
+            <textarea id="myComment" placeholder="Enter your description..." width="600px" height="300px"></textarea>
+          </form>
+        </section>'`)
   })
 }
