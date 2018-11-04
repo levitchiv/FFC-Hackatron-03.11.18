@@ -1,14 +1,37 @@
 function initForm() {
     $('form').on('submit', function (e) {
-        debugger;
-
         e.preventDefault();
+        var name = $('#name').val();
+        var email = $('#email').val();
+        var phone = $('#phone').val();
+        var category = $('#category').val();
+        var item_name = $('#item-id').val()
+        var subject = $('#subject').val();
+        var coords = $('custId').val();
 
         $.ajax({
             type: 'POST',
             url: 'https://vadim-hasura.herokuapp.com/v1alpha1/graphql',
-            data: $('form').serialize(),
+            data: JSON.stringify({
+              query: `mutation insert_found_objects {
+                  insert_found_objects(
+                    objects: [
+                      {
+                        name:
+                        email: "${email}",
+                      }
+                    ]
+                  ) {
+                    returning {
+                      id
+                    }
+                  }
+                }`,
+          operationName: "insert_found_objects",
+          variables: null}
+      ),
             success: function (response) {
+              debugger;
                 //$('form')[0].reset();
                 // $("#feedback").text(response);
                 if (response == "True") {
