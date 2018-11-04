@@ -228,6 +228,25 @@ input.invalid, textarea.invalid{
 input.valid, textarea.valid{
 	border: 2px solid green;
 }
+.formspree{
+	width: 500px;
+	/* margin: 0 auto; */
+	position: absolute;	
+		left:0;
+	right:0;
+	margin-left:auto;
+	margin-right:auto;
+	top: 300px;
+	background-color:#3a404e;
+	padding: 40px;
+}
+.formspree h2 {
+	font-family: Lato;
+	font-size: 36px;
+	color: #FFFFFF;
+	text-align: center;
+}
+.formspree p {padding-bottom: 50px;}
 @media (max-width: 768px){
 	#Togglemap {width: 45%;margin: 0 auto;}
 	.form-main {width: 75%;}
