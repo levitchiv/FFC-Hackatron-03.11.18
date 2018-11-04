@@ -31,7 +31,7 @@ function showMarkers() {
         marker.setMap(map);
         //creez info pentru marker
         var infowindow = new google.maps.InfoWindow({
-          content: (item.name)
+          content: ("Item: " + item.name + "<br>Category: " + item.category + "<br><button type='button' id='contactBtn'>Contact me</button>")
         });
 
         google.maps.event.addListener(marker, 'click', function () {

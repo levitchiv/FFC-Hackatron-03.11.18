@@ -22,7 +22,7 @@ function initForm() {
                         name: "${name}",
                         email: "${email}",
                         phone: "${phone}",
-
+                        category: "${category}",
                         item_name: "${item_name}",
                         description: "${subject}",
                         lat: "${lat}",
@@ -42,9 +42,10 @@ function initForm() {
 
                 $('.form')[0].reset();
                 alert("Item succesfully posted!");
+                location.reload();
             },
             error: function (response) {
-              alert("Item was not posted!");
+              alert("Make sure that you mark the place where you found the object on the map!");
             }
         });
 
