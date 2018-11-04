@@ -20,7 +20,8 @@ $(function () {
                     });
                 } else { marker.setPosition(location); }
 
-                $("#custId").val(location);
+                $("#lat").val(location.lat);
+                $("#lng").val(location.lng);
             }
         });
         $("#showMarker").on("click", showMarkers);

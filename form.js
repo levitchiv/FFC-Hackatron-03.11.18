@@ -8,7 +8,8 @@ function initForm() {
         var category = $('#category').val();
         var item_name = $('#item-id').val()
         var subject = $('#subject').val();
-        var coords = $('custId').val();
+        var lat = $('#lat').val();
+        var lng = $('#lng').val()
 
         $.ajax({
             type: 'POST',
@@ -20,6 +21,12 @@ function initForm() {
                       {
                         name: "${name}",
                         email: "${email}",
+                        phone: "${phone}",
+
+                        item_name: "${item_name}",
+                        description: "${subject}",
+                        lat: "${lat}",
+                        lng: "${lng}"
                       }
                     ]
                   ) {
