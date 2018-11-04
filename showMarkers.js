@@ -32,12 +32,20 @@ function showMarkers() {
         //creez info pentru marker
         var infowindow = new google.maps.InfoWindow({
           content: ("Item: " + item.name + "<br>Category: " + item.category + "<br><button type='button' id='contactBtn'>Contact me</button>")
+
         });
 
         google.maps.event.addListener(marker, 'click', function () {
           infowindow.open(map, marker);
-        });
+        })
       });
     }
   });
+loadFormspree();
+}
+
+function loadFormspree(){
+  $("#contactBtn").on("click", function(){
+    $("#wrapper").load("form-formspree.html");
+  })
 }
