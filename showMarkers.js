@@ -24,6 +24,7 @@ function showMarkers() {
     success: function (result) {
       location = result;
       location = location.data.found_objects;
+      itemList(location);
       location.forEach(function (item) {
         var coords = new google.maps.LatLng(item.lat, item.lng);
         //creez marker pe coordonatele din obiectul
