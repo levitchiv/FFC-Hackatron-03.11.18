@@ -146,7 +146,7 @@ p { font-family: 'Lato';
 	margin-bottom: 100px;
 }
 
-.form-find {	
+.form-find {
 	width: 80%;
 	margin: 0 auto;
 	margin-top: 70px;
@@ -158,7 +158,7 @@ label {
     text-align: center;
 	display: block;
 	padding: 15px 0px ;
-	text-transform: uppercase; 
+	text-transform: uppercase;
 	color: #FFFFFF;
 }
 input[type=text],input[type=tel],input[type=email], select, textarea  {
@@ -169,7 +169,7 @@ input[type=text],input[type=tel],input[type=email], select, textarea  {
     border-radius: 4px;
 	resize: vertical;
 	background-color: #BDBDBD;
-	
+
 }
 input[type="submit"] {
 	position: relative;
@@ -213,7 +213,7 @@ input[type="submit"] {
 	display: none;
 	margin-left: 10px;
 	margin-top: 10px;
-}		
+}
 
 .error_show{
 	color: red;
@@ -231,7 +231,7 @@ input.valid, textarea.valid{
 .formspree{
 	width: 500px;
 	/* margin: 0 auto; */
-	position: absolute;	
+	position: absolute;
 		left:0;
 	right:0;
 	margin-left:auto;
@@ -250,7 +250,7 @@ input.valid, textarea.valid{
 }
 .formspree p {padding-bottom: 50px;}
 
-#myName,#myEmail, #myNumber {margin-bottom: 30px;}
+#myName,#myEmail, #myNumber, #mySubmit {margin-bottom: 30px;}
 #myNumber{
 	padding: 15px;
 	width: 94%;

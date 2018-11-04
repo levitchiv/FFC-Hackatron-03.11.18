@@ -48,7 +48,7 @@ function showMarkers() {
 
 function loadFormspree(item){
   $("#contactBtn").click(function(){
-    $("#mapContainer").slideUp("speed: slow");
+
     $("#wrapper").html(`'<section class="formspree">
           <h2>Lost & Found</h2>
           <p>Did you lose something? Please give us some details about your lost item and get in touch with the person who found it.<br><br> The person that found this item: `+ item.name +`<br>Their phone: `+ item.phone +`<br>Their email address: `+item.email +`</p>
@@ -57,7 +57,7 @@ function loadFormspree(item){
             <input type="email" id="myEmail" name="Email" placeholder="Enter your email...">
             <input type="number" id="myNumber" name="Phone" placeholder="Enter your phone number...">
             <textarea id="myComment" name="Message" placeholder="Enter your description..." width="600px" height="450px"></textarea>
-            <button type="submit" value="send">Submit</button>
+            <button type="submit" value="send" id="mySubmit">Submit</button>
             </form>
         </section>'`)
   })
