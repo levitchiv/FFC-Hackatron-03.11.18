@@ -1,6 +1,7 @@
 function initForm() {
     $('form').on('submit', function (e) {
         e.preventDefault();
+
         var name = $('#name').val();
         var email = $('#email').val();
         var phone = $('#phone').val();
@@ -17,7 +18,7 @@ function initForm() {
                   insert_found_objects(
                     objects: [
                       {
-                        name:
+                        name: "${name}",
                         email: "${email}",
                       }
                     ]
