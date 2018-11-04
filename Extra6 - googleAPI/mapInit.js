@@ -2,7 +2,7 @@ var map;
 
 $(document).ready(function(){
   //slideToggle pentru harta
-  
+
 
 
   $("#mapContainer").hide();
@@ -14,7 +14,7 @@ $(document).ready(function(){
   function initMap(position) {
     var defaultOptions = {
       center: {lat: position.coords.latitude, lng: position.coords.longitude},
-      zoom: 15
+      zoom: 6
     }
     map = new google.maps.Map(document.getElementById('mapContainer'), defaultOptions);
   }
