@@ -39,15 +39,12 @@ function initForm() {
           variables: null}
       ),
             success: function (response) {
-              debugger;
-                //$('form')[0].reset();
-                // $("#feedback").text(response);
-                if (response == "True") {
-                    $('form')[0].reset();
-                    $("#feedback").text("Your information has been stored.");
-                }
-                else
-                    $("#feedback").text(" Some Error has occured Errror !!! ID duplicate");
+
+                $('.form')[0].reset();
+                alert("Item succesfully posted!");
+            },
+            error: function (response) {
+              alert("Item was not posted!");
             }
         });
 
