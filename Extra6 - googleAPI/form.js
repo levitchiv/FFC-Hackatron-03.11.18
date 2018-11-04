@@ -1,5 +1,4 @@
-$(function () {
-debugger;
+function initForm() {
     $('form').on('submit', function (e) {
         debugger;
 
@@ -11,8 +10,8 @@ debugger;
             data: $('form').serialize(),
             success: function (response) {
                 //$('form')[0].reset();
-               // $("#feedback").text(response);
-                if(response=="True") {
+                // $("#feedback").text(response);
+                if (response == "True") {
                     $('form')[0].reset();
                     $("#feedback").text("Your information has been stored.");
                 }
@@ -22,5 +21,4 @@ debugger;
         });
 
     });
-
-});
+}

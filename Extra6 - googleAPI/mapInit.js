@@ -1,9 +1,6 @@
 var map;
 
 $(document).ready(function(){
-  //slideToggle pentru harta
-
-
 
   $("#mapContainer").hide();
   $("#Togglemap").on("click", function(){
