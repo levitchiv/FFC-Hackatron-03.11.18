@@ -59,8 +59,8 @@ function loadFormspree(item){
             <input type="number" id="myNumber" name="Phone" placeholder="Enter your phone number...">
             <textarea id="myComment" name="Message" placeholder="Enter your description..." width="600px" height="450px"></textarea>
             <button type="submit" value="send" id="mySubmit" class="submitBtn">Submit</button>
-            <button type="button" id="myCancel" class="submitBtn">Cancel</button>
-            </form>
+          </form>
         </section>'`)
   })
+
 }
