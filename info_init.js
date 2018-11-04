@@ -1,5 +1,8 @@
 $(function () {
     $("#wrapper").load("info.html", initEvents);
+    $("#homeBtn").on("click", function(){
+      location.reload();
+    })
     function initEvents() {
         $("#createMarker").on("click", function () {
 

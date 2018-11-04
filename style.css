@@ -47,7 +47,7 @@ table {
   height: 100px;
   background-color: #3a404e;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -275,4 +275,20 @@ tr, td, th {
 	#Togglemap {width: 65%;margin: 0 auto;}
 	.form-main {width: 100%;}
 	input[type="submit"] {width: 250px;}
+}
+
+#homeBtn {
+	width: 15%;
+  height: 70px;
+  background-color: #4767a1;
+  outline: 0;
+  border: none;
+  margin-right : 60px;
+	margin-left : 60px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #fff;
+  text-transform: uppercase;
+
 }
