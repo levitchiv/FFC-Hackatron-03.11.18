@@ -1,5 +1,5 @@
 function itemList (arr){
-  var table = '<table id="tableList" style="width:80%"></table>';
+  var table = '<section id="formspree" class="formspree"><table id="tableList" style="width:100%"></table></section>';
   document.getElementById('wrapper').innerHTML = table;
   var stringItemList = "<tr><th>Category</th><th>Item Name</th><th>Who Foundit</th><th>Email</th><th>Phone</th><th>Description</th></tr>";
 
