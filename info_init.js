@@ -1,17 +1,21 @@
 $(function () {
-    $("#wrapper").load("info.html", initEvents);
+    $("#wrapper").load("info.html", function(){
+      initEvents();
+    });
     $("#homeBtn").on("click", function(){
       location.reload();
     })
     function initEvents() {
         $("#createMarker").on("click", function () {
 
-            $('#wrapper').load("form_find.html", initForm);
+            $('#wrapper').load("form_find.html", function(){
+              initForm();
+            });
 
             $("#mapContainer").slideDown("speed: slow");
             var marker;
 
-            google.maps.event.addListener(map, 'click', function (event) {
+            google.maps.event.addListener(map, 'click', function(event) {
                 placeMarker(event.latLng);
             });
 
@@ -27,7 +31,9 @@ $(function () {
                 $("#lng").val(location.lng);
             }
         });
-        $("#showMarker").on("click", showMarkers);
+        $("#showMarker").on("click", function(){
+          showMarkers();
+        });
     }
 
 });
