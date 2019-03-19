@@ -1,5 +1,5 @@
 $(function () {
-    $("#wrapper").load("info.html", function(){
+    $("#wrapper").load("main_page.html", function(){
       initEvents();
     });
     $("#homeBtn").on("click", function(){
@@ -8,7 +8,7 @@ $(function () {
     function initEvents() {
         $("#createMarker").on("click", function () {
 
-            $('#wrapper').load("form_find.html", function(){
+            $('#wrapper').load("add_object_form.html", function(){
               initForm();
             });
 

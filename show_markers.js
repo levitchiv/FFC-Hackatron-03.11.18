@@ -1,7 +1,7 @@
 function showMarkers() {
   $("#mapContainer").slideDown("speed: slow");
 
-  var lostObjects = [];
+  lostObjects = [];
 
   $.ajax({
     type: 'POST',
@@ -23,35 +23,37 @@ function showMarkers() {
     }`, variables: null}),
     success: function (result) {
       lostObjects = result.data.found_objects;
-      itemList(lostObjects);
-      lostObjects.forEach(function (item) {
-        var coords = new google.maps.LatLng(item.lat, item.lng);
+      itemList(lostObjects); //initializez lista de obiecte
+      for(let i = 0; i < lostObjects.length; i++) {
+        var coords = new google.maps.LatLng(lostObjects[i].lat, lostObjects[i].lng);
         //creez marker pe coordonatele din obiectul
-        var marker = new google.maps.Marker({ position: coords });
-        marker.setMap(map);
-        //creez info pentru marker
-        var infowindow = new google.maps.InfoWindow({
-          content: ("Item: " + item.item_name + "<br>Category: " + item.category + "<br><button type='button' id='contactBtn'>Contact me</button>")
-        });
+        var marker = new google.maps.Marker({
+           position: coords,
+           map: map,
+           title: lostObjects[i].item_name
+         });
 
-        google.maps.event.addListener(marker, 'click', function () {
-          infowindow.open(map, marker);
-          google.maps.event.addListener(infowindow,'domready', function() {
-            loadFormspree(item);
-          });
+        //creez info pentru marker
+
+
+        marker.addListener('click', function (coords) {
+          var infowindow = new google.maps.InfoWindow();
+          infowindow.setPosition(coords.latLng);
+          infowindow.setContent("Item: " + lostObjects[i].item_name + "<br>Category: " + lostObjects[i].category + `<br><button type='button' onclick='loadFormspree(${i})'>Contact me</button>`);
+          infowindow.open(map);
         });
-      });
+      };
     }
   });
 };
 
-function loadFormspree(item){
-  $("#contactBtn").click(function(){
+function loadFormspree(idx){
+  // $(".contactBtn").click(function(){
 
     $("#wrapper").html(`<section class="formspree">
           <h2>Lost & Found</h2>
-          <p>Did you lose something? Please give us some details about your lost item and get in touch with the person who found it.<br><br> The person that found this item: `+ item.name +`<br>Their phone: `+ item.phone +`<br>Their email address: `+item.email +`</p>
-          <form action="https://formspree.io/`+ item.email +`" method="POST" target="_blank" >
+          <p>Did you lose something? Please give us some details about your lost item and get in touch with the person who found it.<br><br> The person that found this item: `+ lostObjects[idx].name +`<br>Their phone: `+ lostObjects[idx].phone +`<br>Their email address: `+lostObjects[idx].email +`</p>
+          <form action="https://formspree.io/`+ lostObjects[idx].email +`" method="POST" target="_blank" >
             <input type="text" id="myName" name="Name" placeholder="Enter your name...">
             <input type="email" id="myEmail" name="Email" placeholder="Enter your email...">
             <input type="number" id="myNumber" name="Phone" placeholder="Enter your phone number...">
@@ -59,6 +61,6 @@ function loadFormspree(item){
             <button type="submit" value="send" id="mySubmit" class="submitBtn">Submit</button>
           </form>
         </section>`)
-  })
+  // })
 
 }
