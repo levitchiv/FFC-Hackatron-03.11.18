@@ -1,7 +1,7 @@
 function showMarkers() {
   $("#mapContainer").slideDown("speed: slow");
 
-  lostObjects = [];
+  window.lostObjects = [];
 
   $.ajax({
     type: 'POST',
@@ -26,20 +26,18 @@ function showMarkers() {
       itemList(lostObjects); //initializez lista de obiecte
       for(let i = 0; i < lostObjects.length; i++) {
         var coords = new google.maps.LatLng(lostObjects[i].lat, lostObjects[i].lng);
-        //creez marker pe coordonatele din obiectul
+        //creez marker pe coordonatele din fiecare obiect pierdut
         var marker = new google.maps.Marker({
            position: coords,
            map: map,
            title: lostObjects[i].item_name
          });
 
-        //creez info pentru marker
-
-
         marker.addListener('click', function (coords) {
+          //creez infoWindow pentru markere
           var infowindow = new google.maps.InfoWindow();
           infowindow.setPosition(coords.latLng);
-          infowindow.setContent("Item: " + lostObjects[i].item_name + "<br>Category: " + lostObjects[i].category + `<br><button type='button' onclick='loadFormspree(${i})'>Contact me</button>`);
+          infowindow.setContent(`Item: ${lostObjects[i].item_name}<br>Category: ${lostObjects[i].category} <br><button type='button' onclick='loadFormspree(${i})'>Contact me</button>`);
           infowindow.open(map);
         });
       };
@@ -48,12 +46,10 @@ function showMarkers() {
 };
 
 function loadFormspree(idx){
-  // $(".contactBtn").click(function(){
-
     $("#wrapper").html(`<section class="formspree">
           <h2>Lost & Found</h2>
-          <p>Did you lose something? Please give us some details about your lost item and get in touch with the person who found it.<br><br> The person that found this item: `+ lostObjects[idx].name +`<br>Their phone: `+ lostObjects[idx].phone +`<br>Their email address: `+lostObjects[idx].email +`</p>
-          <form action="https://formspree.io/`+ lostObjects[idx].email +`" method="POST" target="_blank" >
+          <p>Did you lose something? Please give us some details about your lost item and get in touch with the person who found it.<br><br> The person that found this item: ${lostObjects[idx].name} <br>Their phone: ${lostObjects[idx].phone} <br>Their email address: ${lostObjects[idx].email} </p>
+          <form action="https://formspree.io/${lostObjects[idx].email}" method="POST" target="_blank" >
             <input type="text" id="myName" name="Name" placeholder="Enter your name...">
             <input type="email" id="myEmail" name="Email" placeholder="Enter your email...">
             <input type="number" id="myNumber" name="Phone" placeholder="Enter your phone number...">
@@ -61,6 +57,4 @@ function loadFormspree(idx){
             <button type="submit" value="send" id="mySubmit" class="submitBtn">Submit</button>
           </form>
         </section>`)
-  // })
-
 }
