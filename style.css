@@ -132,7 +132,9 @@ p {
 }
 
 .info {
-	background-color: #607D8B;padding-bottom: 100px;
+	background-color: #607D8B;
+	padding-bottom: 100px;
+	height: 80vh;
 }
 
 .info p{
