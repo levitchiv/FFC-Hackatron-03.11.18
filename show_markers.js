@@ -23,7 +23,9 @@ function showMarkers() {
     }`, variables: null}),
     success: function (result) {
       lostObjects = result.data.found_objects;
-      itemList(lostObjects); //initializez lista de obiecte
+      if(screen.width > 820){
+        itemList(lostObjects); //initializez lista de obiecte
+      }
       for(let i = 0; i < lostObjects.length; i++) {
         var coords = new google.maps.LatLng(lostObjects[i].lat, lostObjects[i].lng);
         //creez marker pe coordonatele din fiecare obiect pierdut

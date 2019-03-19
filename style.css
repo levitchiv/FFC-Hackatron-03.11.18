@@ -52,7 +52,7 @@ table {
 }
 
 #showMap {
-	width: 15%;
+	width: 200px;
 	height: 70px;
 	background-color: #4767a1;
 	outline: 0;
@@ -135,6 +135,10 @@ p {
 	background-color: #607D8B;padding-bottom: 100px;
 }
 
+.info p{
+	padding: 10px;
+}
+
 
 /* Forms */
 .form-main {
@@ -180,7 +184,7 @@ input[type="submit"], .submitBtn {
 	font-size: 24px;
 	color: #FFFFFF;
 	padding: 20px;
-	width: 300px;
+	width: 200px;
 	text-align: center;
 	-webkit-transition-duration: 0.4s; /* Safari */
 	transition-duration: 0.4s;
@@ -276,6 +280,39 @@ tr, td, th {
 	border: none;
 }
 
+#formspree {
+	font-family: sans-serif;
+}
+
+#formspree th {
+	font-weight: bold;
+	border-top: solid 1px rgba(225,225,225,0.4);
+	border-left: solid 1px rgba(225,225,225,0.4);
+	border-right: solid 1px rgba(225,225,225,0.4);
+	text-align: center;
+}
+
+#formspree td {
+	border-top: solid 1px rgba(225,225,225,0.4);
+	border-bottom: solid 1px rgba(225,225,225,0.4);
+}
+
+.d-flex {
+	display: flex;
+}
+
+.justify-center {
+	justify-content: center;
+}
+
+.flex-column {
+	flex-direction: column;
+}
+
+.align-center {
+	align-items: center;
+}
+
 @media (max-width: 768px){
 	#Togglemap {
 		width: 45%;
@@ -298,12 +335,12 @@ tr, td, th {
 	}
 
 	input[type="submit"] {
-		width: 250px;
+		width: 200px;
 	}
 }
 
 #homeBtn {
-	width: 15%;
+	width: 200px;
 	height: 70px;
 	background-color: #4767a1;
 	outline: 0;
