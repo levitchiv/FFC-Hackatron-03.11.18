@@ -248,40 +248,16 @@ input.valid, textarea.valid{
 
 #formspree {
 	top: 500px;
-	width: 80%;
+	width: 60%;
 	color: white;
 	border: 1px solid;
-	padding: 20px
-}
-
-tr, td, th {
-	text-align: left;
-	padding: 10px;
-}
-
-.formspree h2 {
-	font-family: Lato;
-	font-size: 36px;
-	color: #FFFFFF;
-	text-align: center;
-}
-.formspree p {
-	padding-bottom: 50px;
-}
-
-#myName,#myEmail, #myNumber, #mySubmit {
-	margin-bottom: 30px;
-}
-#myNumber{
-	padding: 15px;
-	width: 94%;
-	border-radius: 7px;
-	background-color: #BDBDBD;
-	border: none;
-}
-
-#formspree {
+	padding: 20px;
 	font-family: sans-serif;
+}
+
+#formspree tr, #formspree td, #formspree th {
+	padding: 10px;
+	vertical-align: middle;
 }
 
 #formspree th {
@@ -296,6 +272,19 @@ tr, td, th {
 	border-top: solid 1px rgba(225,225,225,0.4);
 	border-bottom: solid 1px rgba(225,225,225,0.4);
 }
+
+#myName,#myEmail, #myNumber, #mySubmit {
+	margin-bottom: 30px;
+}
+#myNumber{
+	padding: 15px;
+	width: 94%;
+	border-radius: 7px;
+	background-color: #BDBDBD;
+	border: none;
+}
+
+
 
 .d-flex {
 	display: flex;
@@ -321,6 +310,12 @@ tr, td, th {
 
 	.form-main {
 		width: 75%;
+	}
+
+	#formspree {
+		width: 100%;
+		margin: 0;
+		padding: 0;
 	}
 }
 

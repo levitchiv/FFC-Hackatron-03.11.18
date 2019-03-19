@@ -23,7 +23,7 @@ function showMarkers() {
     }`, variables: null}),
     success: function (result) {
       lostObjects = result.data.found_objects;
-      if(screen.width > 820){
+      if(screen.width > 730){
         itemList(lostObjects); //initializez lista de obiecte
       }
       for(let i = 0; i < lostObjects.length; i++) {
