@@ -25,7 +25,9 @@ $(function () {
                         position: location,
                         map: map
                     });
-                } else { marker.setPosition(location); }
+                } else {
+                  marker.setPosition(location);
+                }
 
                 $("#lat").val(location.lat);
                 $("#lng").val(location.lng);
@@ -35,5 +37,4 @@ $(function () {
           showMarkers();
         });
     }
-
 });

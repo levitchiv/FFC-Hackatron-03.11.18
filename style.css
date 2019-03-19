@@ -43,32 +43,32 @@ table {
 }
 
 #navBar {
-  width: 100%;
-  height: 100px;
-  background-color: #3a404e;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+	width: 100%;
+	height: 100px;
+	background-color: #3a404e;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 #Togglemap {
-  width: 15%;
-  height: 70px;
-  background-color: #4767a1;
-  outline: 0;
-  border: none;
-  margin-right : 60px;
-  border-radius: 15px;
-  cursor: pointer;
-  font-size: 16px;
-  color: #fff;
-  text-transform: uppercase;
+	width: 15%;
+	height: 70px;
+	background-color: #4767a1;
+	outline: 0;
+	border: none;
+	margin-right : 60px;
+	border-radius: 15px;
+	cursor: pointer;
+	font-size: 16px;
+	color: #fff;
+	text-transform: uppercase;
 
 }
 
 #mapContainer {
-  width: 100%;
-  height: 350px;
+	width: 100%;
+	height: 350px;
 }
 .position-btn {
 	text-align: center;
@@ -127,8 +127,13 @@ p {
 	cursor: pointer;
 }
 
-#showMarker:hover, #createMarker:hover {box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);}
-.info {background-color: #607D8B;padding-bottom: 100px;}
+#showMarker:hover, #createMarker:hover {
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.info {
+	background-color: #607D8B;padding-bottom: 100px;
+}
 
 
 /* Forms */
@@ -149,18 +154,18 @@ p {
 label {
 	font-family:'Roboto';
 	font-size: 18PX;
-  text-align: center;
+	text-align: center;
 	display: block;
 	padding: 15px 0px ;
 	text-transform: uppercase;
 	color: #FFFFFF;
 }
 input[type=text],input[type=tel],input[type=email], select, textarea  {
-  width: 100%;
+	width: 100%;
 	padding-top: 12px;
 	padding-bottom: 12px;
 	border: 1px solid #ccc;
-  border-radius: 4px;
+	border-radius: 4px;
 	resize: vertical;
 	background-color: #BDBDBD;
 
@@ -170,38 +175,38 @@ input[type="submit"], .submitBtn {
 	margin-top: 30px;
 	margin-bottom: 100px;
 	border-radius: 10px;
-    background-color:#4767a1;
-    border: none;
-    font-size: 24px;
-    color: #FFFFFF;
-    padding: 20px;
-    width: 300px;
-    text-align: center;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-    text-decoration: none;
-    overflow: hidden;
-    cursor: pointer;
+	background-color:#4767a1;
+	border: none;
+	font-size: 24px;
+	color: #FFFFFF;
+	padding: 20px;
+	width: 300px;
+	text-align: center;
+	-webkit-transition-duration: 0.4s; /* Safari */
+	transition-duration: 0.4s;
+	text-decoration: none;
+	overflow: hidden;
+	cursor: pointer;
 }
 
 .input [type=submit] {
-    content: "";
-    background: #f1f1f1;
-    display: block;
-    position: absolute;
-    padding-top: 300%;
-    padding-left: 350%;
-    margin-left: -20px !important;
-    margin-top: -120%;
-    opacity: 0;
-    transition: all 0.8s
+	content: "";
+	background: #f1f1f1;
+	display: block;
+	position: absolute;
+	padding-top: 300%;
+	padding-left: 350%;
+	margin-left: -20px !important;
+	margin-top: -120%;
+	opacity: 0;
+	transition: all 0.8s
 }
 
 .input [type=submit]:active:after {
-    padding: 0;
-    margin: 0;
-    opacity: 1;
-    transition: 0s
+	padding: 0;
+	margin: 0;
+	opacity: 1;
+	transition: 0s
 }
 .error{
 	display: none;
@@ -226,7 +231,7 @@ input.valid, textarea.valid{
 	width: 500px;
 	/* margin: 0 auto; */
 	position: absolute;
-		left:0;
+	left:0;
 	right:0;
 	margin-left:auto;
 	margin-right:auto;
@@ -256,9 +261,13 @@ tr, td, th {
 	color: #FFFFFF;
 	text-align: center;
 }
-.formspree p {padding-bottom: 50px;}
+.formspree p {
+	padding-bottom: 50px;
+}
 
-#myName,#myEmail, #myNumber, #mySubmit {margin-bottom: 30px;}
+#myName,#myEmail, #myNumber, #mySubmit {
+	margin-bottom: 30px;
+}
 #myNumber{
 	padding: 15px;
 	width: 94%;
@@ -266,29 +275,44 @@ tr, td, th {
 	background-color: #BDBDBD;
 	border: none;
 }
+
 @media (max-width: 768px){
-	#Togglemap {width: 45%;margin: 0 auto;}
-	.form-main {width: 75%;}
+	#Togglemap {
+		width: 45%;
+		margin: 0 auto;
+	}
+
+	.form-main {
+		width: 75%;
+	}
 }
 
 @media (max-width: 480px) {
-	#Togglemap {width: 65%;margin: 0 auto;}
-	.form-main {width: 100%;}
-	input[type="submit"] {width: 250px;}
+	#Togglemap {
+		width: 65%;
+		margin: 0 auto;
+	}
+
+	.form-main {
+		width: 100%;
+	}
+
+	input[type="submit"] {
+		width: 250px;
+	}
 }
 
 #homeBtn {
 	width: 15%;
-  height: 70px;
-  background-color: #4767a1;
-  outline: 0;
-  border: none;
-  margin-right : 60px;
+	height: 70px;
+	background-color: #4767a1;
+	outline: 0;
+	border: none;
+	margin-right : 60px;
 	margin-left : 60px;
-  border-radius: 15px;
-  cursor: pointer;
-  font-size: 16px;
-  color: #fff;
-  text-transform: uppercase;
-
+	border-radius: 15px;
+	cursor: pointer;
+	font-size: 16px;
+	color: #fff;
+	text-transform: uppercase;
 }

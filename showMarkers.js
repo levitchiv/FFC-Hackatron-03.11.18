@@ -1,7 +1,7 @@
 function showMarkers() {
   $("#mapContainer").slideDown("speed: slow");
 
-  var location = [];
+  var lostObjects = [];
 
   $.ajax({
     type: 'POST',
@@ -20,12 +20,11 @@ function showMarkers() {
         lat
         lng
       }
-    }`, variables: null }),
+    }`, variables: null}),
     success: function (result) {
-      location = result;
-      location = location.data.found_objects;
-      itemList(location);
-      location.forEach(function (item) {
+      lostObjects = result.data.found_objects;
+      itemList(lostObjects);
+      lostObjects.forEach(function (item) {
         var coords = new google.maps.LatLng(item.lat, item.lng);
         //creez marker pe coordonatele din obiectul
         var marker = new google.maps.Marker({ position: coords });
@@ -37,20 +36,19 @@ function showMarkers() {
 
         google.maps.event.addListener(marker, 'click', function () {
           infowindow.open(map, marker);
-          loadFormspree(item);
-        })
-
+          google.maps.event.addListener(infowindow,'domready', function() {
+            loadFormspree(item);
+          });
+        });
       });
-
     }
   });
-
-}
+};
 
 function loadFormspree(item){
   $("#contactBtn").click(function(){
 
-    $("#wrapper").html(`'<section class="formspree">
+    $("#wrapper").html(`<section class="formspree">
           <h2>Lost & Found</h2>
           <p>Did you lose something? Please give us some details about your lost item and get in touch with the person who found it.<br><br> The person that found this item: `+ item.name +`<br>Their phone: `+ item.phone +`<br>Their email address: `+item.email +`</p>
           <form action="https://formspree.io/`+ item.email +`" method="POST" target="_blank" >
@@ -60,7 +58,7 @@ function loadFormspree(item){
             <textarea id="myComment" name="Message" placeholder="Enter your description..." width="600px" height="450px"></textarea>
             <button type="submit" value="send" id="mySubmit" class="submitBtn">Submit</button>
           </form>
-        </section>'`)
+        </section>`)
   })
 
 }
