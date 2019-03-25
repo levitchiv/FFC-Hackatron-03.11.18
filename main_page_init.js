@@ -13,8 +13,8 @@ $(function () {
             });
 
             $("#mapContainer").slideDown("speed: slow");
-            var marker;
 
+            var marker;
             google.maps.event.addListener(map, 'click', function(event) {
                 placeMarker(event.latLng);
             });
@@ -33,6 +33,7 @@ $(function () {
                 $("#lng").val(location.lng);
             }
         });
+
         $("#showMarker").on("click", function(){
           showMarkers();
         });
